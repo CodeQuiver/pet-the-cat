@@ -30,6 +30,13 @@ connection.connect(function(err) {
   console.log("Connected to database at " + connection.threadId);
 });
 
+//TEST SECTION ONLY- REMOVE LATER
+// //IMPORTS
+// var orm = require("./config/orm");
+
+// // Console log all the cat info
+// orm.selectAll("cats");
+
 
 // START LISTENER - begin listening to client requests
 app.listen(PORT, function() {
