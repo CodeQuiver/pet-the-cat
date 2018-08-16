@@ -16,12 +16,13 @@ var orm = {
         console.log(result);
       });
     },
-    insertOne: function(whatToSelect, tableInput) {
-        // var queryString = "SELECT ?? FROM ??";
-        // connection.query(queryString, [whatToSelect, tableInput], function(err, result) {
-        //   if (err) throw err;
-        //   console.log(result);
-        // });
+    insertOne: function(nameOfNewCat) {
+        // INSERT INTO cats (cat_name) VALUES ('Fluffykins');
+        var queryString = "INSERT INTO cats (cat_name) VALUES (?)";
+        connection.query(queryString, nameOfNewCat, function(err, result) {
+          if (err) throw err;
+          console.log(result);
+        });
       },
     selectWhere: function(tableInput, colToSearch, valOfCol) {
     //   var queryString = "SELECT * FROM ?? WHERE ?? = ?";

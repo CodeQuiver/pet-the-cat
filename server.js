@@ -32,11 +32,15 @@ connection.connect(function(err) {
 
 //TEST SECTION ONLY- REMOVE LATER
 // //IMPORTS
-// var orm = require("./config/orm");
+var orm = require("./config/orm");
 
 // // Console log all the cat info
 // orm.selectAll("cats");
 
+//add a new cat
+// orm.insertOne("Italic");
+
+//END TEST SECTION ONLY- REMOVE LATER
 
 // START LISTENER - begin listening to client requests
 app.listen(PORT, function() {
