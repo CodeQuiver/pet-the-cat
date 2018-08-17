@@ -26,7 +26,7 @@ var orm = {
     },
     updateOne: function(colName, newValue, idOfEntryToUpdate) {
       //update one entry - need name of col being updated, new value, id of entry for WHERE clause
-      var queryString = "";//update string
+      var queryString = "UPDATE cats SET ?? = ?? WHERE id = ??";
       connection.query(queryString, [colName, newValue, idOfEntryToUpdate], function(err, result) {
         if (err) throw err;
         console.log(result);
