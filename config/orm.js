@@ -14,6 +14,7 @@ var orm = {
       connection.query(queryString, tableToSelectFrom, function(err, result) {
         if (err) throw err;
         console.log(result);
+        return result;
       });
     },
     insertOne: function(nameOfNewCat) {
@@ -22,14 +23,17 @@ var orm = {
       connection.query(queryString, nameOfNewCat, function(err, result) {
         if (err) throw err;
         console.log(result);
+        return result;
       });
     },
     updateOne: function(colName, newValue, idOfEntryToUpdate) {
       //update one entry - need name of col being updated, new value, id of entry for WHERE clause
-      var queryString = "UPDATE cats SET ?? = ?? WHERE id = ??";
+      //TODO- make sure the function that prints all the results stores the entry ids where they can be accessed for this function, probably in data-id="" in html
+      var queryString = "UPDATE cats SET ?? = (?) WHERE id = (?)";
       connection.query(queryString, [colName, newValue, idOfEntryToUpdate], function(err, result) {
         if (err) throw err;
         console.log(result);
+        return result;
       });
 
     }

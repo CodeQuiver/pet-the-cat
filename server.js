@@ -40,6 +40,9 @@ var orm = require("./config/orm");
 //add a new cat
 // orm.insertOne("Italic");
 
+//update an entry
+orm.updateOne("cat_name", "Fluffy Kitty", 1);
+
 //END TEST SECTION ONLY- REMOVE LATER
 
 // START LISTENER - begin listening to client requests
