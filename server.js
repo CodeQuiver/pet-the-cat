@@ -41,7 +41,7 @@ var orm = require("./config/orm");
 // orm.insertOne("Italic");
 
 //update an entry
-orm.updateOne("cat_name", "Fluffy Kitty", 1);
+// orm.updateOne("cat_name", "Fluffy Kitty", 1);
 
 //END TEST SECTION ONLY- REMOVE LATER
 
