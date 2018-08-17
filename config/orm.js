@@ -17,22 +17,21 @@ var orm = {
       });
     },
     insertOne: function(nameOfNewCat) {
-        // INSERT INTO cats (cat_name) VALUES ('Fluffykins');
-        var queryString = "INSERT INTO cats (cat_name) VALUES (?)";
-        connection.query(queryString, nameOfNewCat, function(err, result) {
-          if (err) throw err;
-          console.log(result);
-        });
-      },
-    selectWhere: function(tableInput, colToSearch, valOfCol) {
-    //   var queryString = "SELECT * FROM ?? WHERE ?? = ?";
-  
-    //   console.log(queryString);
-  
-    //   connection.query(queryString, [tableInput, colToSearch, valOfCol], function(err, result) {
-    //     if (err) throw err;
-    //     console.log(result);
-    //   });
+      // INSERT INTO cats (cat_name) VALUES ('Fluffykins');
+      var queryString = "INSERT INTO cats (cat_name) VALUES (?)";
+      connection.query(queryString, nameOfNewCat, function(err, result) {
+        if (err) throw err;
+        console.log(result);
+      });
+    },
+    updateOne: function(colName, newValue, idOfEntryToUpdate) {
+      //update one entry - need name of col being updated, new value, id of entry for WHERE clause
+      var queryString = "";//update string
+      connection.query(queryString, [colName, newValue, idOfEntryToUpdate], function(err, result) {
+        if (err) throw err;
+        console.log(result);
+      });
+
     }
   };
 
