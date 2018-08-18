@@ -4,8 +4,7 @@ var router = express.Router();
 // Importing the model to use its database functions
 var cat = require("../models/cats_model");
 
-
-//HTML routes
+var getAllRoute = //HTML routes
 router.get("/", function(req, res) {
     cat.all(function(data) {
       var hbsObject = {
@@ -15,6 +14,8 @@ router.get("/", function(req, res) {
       res.render("index", hbsObject);
     });
   });
+
+  module.exports = getAllRoute;
 
 //END HTML routes
 

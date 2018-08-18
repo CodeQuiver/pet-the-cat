@@ -19,8 +19,12 @@ app.set("view engine", "handlebars");
 //REQUIRE other file exports
 var connection = require("./config/connection");
 
+// Import routes and give the server access to them.
+var routes = require("./controllers/cats_controller.js");
 
-//ESTABLISH CONNECTION TO DATABASE
+app.use(routes);
+
+//ESTABLISH CONNECTION TO DATABASE USING CONNECTION CONFIG FILE
 connection.connect(function(err) {
   if(err)
   {
@@ -32,8 +36,8 @@ connection.connect(function(err) {
 
 //TEST SECTION ONLY- REMOVE LATER
 // //IMPORTS
-var orm = require("./config/orm");
-var cat = require("./models/cats_model");
+// var orm = require("./config/orm");
+// var cat = require("./models/cats_model");
 
 
 // // Console log all the cat info
