@@ -32,8 +32,10 @@ connection.connect(function(err) {
 
 //TEST SECTION ONLY- REMOVE LATER
 // //IMPORTS
-// var orm = require("./config/orm");
-// var cat = require("./models/cats_model");
+var orm = require("./config/orm");
+var cat = require("./models/cats_model");
+
+
 // // Console log all the cat info
 // orm.selectAll("cats");
 // cat.all(function(res) {
