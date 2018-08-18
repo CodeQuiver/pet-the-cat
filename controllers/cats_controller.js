@@ -13,8 +13,8 @@ var cat = require("../models/cats_model");
 router.get("/", function(req, res) {
     //call "all" function in cats_model
     //example placeholder- needs more structure to be actually called
-    cat.all(function(res) {
-        console.log(res);
+    cat.all(function(data) {
+        console.log(data);
       });
 });
 
