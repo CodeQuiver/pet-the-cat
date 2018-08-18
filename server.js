@@ -32,20 +32,26 @@ connection.connect(function(err) {
 
 //TEST SECTION ONLY- REMOVE LATER
 // //IMPORTS
-var orm = require("./config/orm");
-var cat = require("./models/cats_model");
+// var orm = require("./config/orm");
+// var cat = require("./models/cats_model");
 // // Console log all the cat info
 // orm.selectAll("cats");
-cat.all(function(res) {
-  console.log(res);
-});
+// cat.all(function(res) {
+//   console.log(res);
+// });
 
 //add a new cat
 // orm.insertOne("Italic");
+// cat.insert("William", function(res){
+//     console.log(res);
+//   });
 
 //update an entry
 // orm.updateOne("cat_name", "Fluffy Kitty", 1);
-
+// cat.update("pet_or_not", 1, 2, function(res){
+//       console.log(res);
+//     });
+  //NOTE- true/false boolean field requires an integer input of 0 or 1
 //END TEST SECTION ONLY- REMOVE LATER
 
 // START LISTENER - begin listening to client requests
