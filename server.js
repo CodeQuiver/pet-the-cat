@@ -33,9 +33,12 @@ connection.connect(function(err) {
 //TEST SECTION ONLY- REMOVE LATER
 // //IMPORTS
 var orm = require("./config/orm");
-
+var cat = require("./models/cats_model");
 // // Console log all the cat info
 // orm.selectAll("cats");
+cat.all(function(res) {
+  console.log(res);
+});
 
 //add a new cat
 // orm.insertOne("Italic");

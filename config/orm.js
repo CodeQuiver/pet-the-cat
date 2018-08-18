@@ -7,6 +7,8 @@
 //IMPORTS
 var connection = require("./connection");
 
+//TODO- change the "cats" table name to a constant at the top rather than directly hard-coding
+
 //DATABASE REQUEST ROUTES
 var orm = {
   //what's the diff b/w 
