@@ -19,6 +19,11 @@ router.get("/", function(req, res) {
     //call cat.all method on model and pass the callback to handle the data
     cat.all(callbackDataHandler);
   });
+//END HTML routes
+
+
+
+//API Data Routes
 
 //POST Route- Creates new cat database entry
 router.post("/api/cats/:name", function(req, res) {
@@ -49,11 +54,19 @@ router.post("/api/cats/:name", function(req, res) {
 //   protocol41: true,
 //   changedRows: 0 }
 
-// Export routes for server.js to use.
-module.exports = router;
+router.put("/api/cats/:updateField/:newValue/:id", function(req, res) {
+  var field = req.params.updateField; // possible fields: "pet_or_not", "cat_name"
+  var value = req.params.newValue;
+  var catId = req.params.id;
+    
+    //call update function in cats_model
+    cat.update(field, value, catId, function(res){
+        console.log(res);
+      });
+});
 
-//END HTML routes
 
+//END API Data Routes
 
 // //API Routes/data routes
 // router.get("/", function(req, res) {
@@ -81,3 +94,7 @@ module.exports = router;
 // });
 
 //END API Routes
+
+
+// Export routes for server.js to use.
+module.exports = router;
