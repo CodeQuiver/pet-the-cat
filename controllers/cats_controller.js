@@ -5,9 +5,8 @@ var router = express.Router();
 var cat = require("../models/cats_model");
 
 //HTML routes
-//First route- displays home page
+//Get All route- displays home page and retrieves all data from cats table
 router.get("/", function(req, res) {
-  
     //define callback function that will be passed through when data is requested to handle the response data
     function callbackDataHandler(data) {
       var hbsObject = {
@@ -20,6 +19,35 @@ router.get("/", function(req, res) {
     //call cat.all method on model and pass the callback to handle the data
     cat.all(callbackDataHandler);
   });
+
+//POST Route- Creates new cat database entry
+router.post("/api/cats/:name", function(req, res) {
+  //router.post stores name parameter from url post request
+  console.log("hello i am in post");
+  // console.log(req);
+  // console.log(res);
+  console.log("i am done");
+  
+  cat.insert(req.params.name, function(result) {
+    console.log("full response after insert POST request");
+    console.log(result);
+    // Send back the ID of the new cat entry
+    res.json({ id: result.insertId });
+    console.log("Just sent ID back via res.json, ID is: ");
+    console.log(res.json.id);
+  });
+});
+
+// result example:
+// OkPacket {
+//   fieldCount: 0,
+//   affectedRows: 1,
+//   insertId: 12,
+//   serverStatus: 2,
+//   warningCount: 0,
+//   message: '',
+//   protocol41: true,
+//   changedRows: 0 }
 
 // Export routes for server.js to use.
 module.exports = router;
