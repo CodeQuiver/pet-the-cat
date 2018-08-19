@@ -5,14 +5,20 @@ var router = express.Router();
 var cat = require("../models/cats_model");
 
 //HTML routes
+//First route- displays home page
 router.get("/", function(req, res) {
-    cat.all(function(data) {
+  
+    //define callback function that will be passed through when data is requested to handle the response data
+    function callbackDataHandler(data) {
       var hbsObject = {
         cats: data
       };
       console.log(hbsObject);
       res.render("index", hbsObject);
-    });
+    };
+
+    //call cat.all method on model and pass the callback to handle the data
+    cat.all(callbackDataHandler);
   });
 
 // Export routes for server.js to use.
