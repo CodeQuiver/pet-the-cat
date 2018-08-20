@@ -28,32 +28,33 @@ router.get("/", function(req, res) {
 //POST Route- Creates new cat database entry
 router.post("/api/cats/:name", function(req, res) {
   //router.post stores name parameter from url post request
-  console.log("hello i am in post");
+  // console.log("hello i am in post");
   // console.log(req);
   // console.log(res);
-  console.log("i am done");
+  // console.log("i am done");
   
   cat.insert(req.params.name, function(result) {
-    console.log("full response after insert POST request");
-    console.log(result);
+    // console.log("full response after insert POST request");
+    // console.log(result);
     // Send back the ID of the new cat entry
     res.json({ id: result.insertId });
-    console.log("Just sent ID back via res.json, ID is: ");
-    console.log(res.json.id);
+    // console.log("Just sent ID back via res.json, ID is: ");
+    // console.log(res.json.id);
   });
 });
 
-// result example:
-// OkPacket {
-//   fieldCount: 0,
-//   affectedRows: 1,
-//   insertId: 12,
-//   serverStatus: 2,
-//   warningCount: 0,
-//   message: '',
-//   protocol41: true,
-//   changedRows: 0 }
+      // POST result example:
+      // OkPacket {
+      //   fieldCount: 0,
+      //   affectedRows: 1,
+      //   insertId: 12,
+      //   serverStatus: 2,
+      //   warningCount: 0,
+      //   message: '',
+      //   protocol41: true,
+      //   changedRows: 0 }
 
+//PUT ROUTE - updates an entry based on entry id
 router.put("/api/cats/:updateField/:newValue/:id", function(req, res) {
   var field = req.params.updateField; // possible fields: "pet_or_not", "cat_name"
   var value = req.params.newValue;
