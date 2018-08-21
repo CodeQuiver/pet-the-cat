@@ -2,6 +2,9 @@
 var express = require("express");
 var app = express();
 
+// Serve static content for the app from the "public" directory in the application directory.
+app.use(express.static("public"));
+
 //BODY-PARSER STANDARD SETUP WITH EXPRESS
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({extended: true}));
