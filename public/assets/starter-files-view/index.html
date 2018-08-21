@@ -38,89 +38,97 @@
         <!-- end spacer left -->
 
         <!-- inner box -->		
-        <section class="col-xs-12 col-sm-10 col-md-8 col-lg-8 jumbotron card card-block">
+        <section class="col-xs-12 col-sm-10 col-md-8 col-lg-8 jumbotron card card-block py-4">
             <h1>
                 Pet the Cat!
             </h1>
+            <!-- instructions -->
+            <p>
+                Name a cat, and then pet them! That's it!
+            </p>
+            <!-- end instructions -->
             
             <hr>
 
-            <!-- instructions -->
-            <article>
-                Name a cat, and then pet them! That's it! Pet our cats too! 
-            </article>
-            <!-- end instructions -->
             <!-- form -->
+            <form action="submit" method="post" class="create-cat">
+                <div class="form-group">
+                    <label for="new-name">Name of New Cat:</label>
+                    <input type="text" class="form-control" id="new-name" name="new-name" placeholder="Cat's Name" />
+                </div>
+                <button type="submit" class="btn btn-primary py-md-2 px-md-4">Submit</button>
+            </form>
             <!-- end form -->
 
                 
             <hr>
         
-        <!-- cards - List of Cats -->
-        <div class="row ">
-            <div class="col-md-4 py-md-3">
-                <div class="card">
-                    <h2 class="card-title py-md-2 px-md-4">
-                        Cat Name Here
-                    </h2>
+            <!-- cards - List of Cats -->
+            <div class="row ">
+                <div class="col-md-4">
+                    <div class="card my-md-2 my-sm-2 my-xs-2 my-xs-2">
+                        <h2 class="card-title py-md-3 px-md-4">
+                            Cat Name Here
+                        </h2>
 
-                    <img class="card-img" alt="cat to pet" src="https://placekitten.com/280/200?image=2" />
-                    
-                    <button type="submit" class="btn btn-primary py-md-2 px-md-4">Pet Me!</button>
+                        <img class="card-img" alt="cat to pet" src="https://placekitten.com/280/200?image=2" />
+                        
+                        <button type="submit" class="btn btn-primary py-md-2 px-md-4 pet-the-cat" data-id="2" data-pet-state="0">Pet Me!</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card my-md-2 my-sm-2 my-xs-2">
+                        <h2 class="card-title py-md-3 px-md-4">
+                            Cat Name Here
+                        </h2>
+
+                        <img class="card-img" alt="cat to pet" src="https://placekitten.com/280/200?image=2" />
+                        
+                        <button type="submit" class="btn btn-primary py-md-2 px-md-4 pet-the-cat" data-id="2" data-pet-state="0">Pet Me!</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card my-md-2 my-sm-2 my-xs-2">
+                        <h2 class="card-title py-md-3 px-md-4">
+                            Cat Name Here
+                        </h2>
+
+                        <img class="card-img" alt="cat to pet" src="https://placekitten.com/280/200?image=2" />
+                        
+                        <button type="submit" class="btn btn-primary py-md-2 px-md-4 pet-the-cat" data-id="2" data-pet-state="0">Pet Me!</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card my-md-2 my-sm-2 my-xs-2">
+                        <h2 class="card-title py-md-3 px-md-4">
+                            Cat Name Here
+                        </h2>
+
+                        <img class="card-img" alt="cat to pet" src="https://placekitten.com/280/200?image=2" />
+                        
+                        <button type="submit" class="btn btn-primary py-md-2 px-md-4 pet-the-cat" data-id="2" data-pet-state="0">Pet Me!</button>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4 py-md-3">
-                <div class="card">
-                    <h2 class="card-title">
-                        Cat Name Here
-                    </h2>
-
-                    <img class="card-img" alt="cat to pet" src="https://placekitten.com/280/200?image=2" />
-                    
-                    <button type="submit" class="btn btn-primary py-md-2 px-md-4">Pet Me!</button>
-                </div>
-            </div>
-            <div class="col-md-4 py-md-3">
-                <div class="card">
-                    <h2 class="card-title">
-                        Cat Name Here
-                    </h2>
-
-                    <img class="card-img" alt="cat to pet" src="https://placekitten.com/280/200?image=2" />
-                    
-                    <button type="submit" class="btn btn-primary py-md-2 px-md-4">Pet Me!</button>
-                </div>
-            </div>
-            <div class="col-md-4 py-md-3">
-                <div class="card">
-                    <h2 class="card-title ">
-                        Cat Name Here
-                    </h2>
-
-                    <img class="card-img" alt="cat to pet" src="https://placekitten.com/280/200?image=2" />
-                    
-                    <button type="submit" class="btn btn-primary py-md-2 px-md-4">Pet Me!</button>
-                </div>
-            </div>
-        <!-- end cards - List of Cats -->
+            <!-- end cards - List of Cats -->
         
-    </section>
-    <!-- end inner box -->
-        
+        </section>
+        <!-- end inner box -->
+            
         <!-- spacer right -->
-		<div class="col-xs-0 col-sm-1 col-md-2 col-lg-2">
+        <div class="col-xs-0 col-sm-1 col-md-2 col-lg-2">
         </div>
         <!-- end spacer right -->
     </div>
-    <!-- end row2 page body -->
+        <!-- end row2 page body -->
 
-    <!-- row3 footer -->
-    <footer class="row fixed-bottom">
-        <p class="col-md-12 p-md-2 m-md-1">
-            Copyright &copy; 2018 PersephoneUnderground Designs
-        </p>     
-    </footer>
-    <!-- end row3 footer -->
+        <!-- row3 footer -->
+        <footer class="row fixed-bottom">
+            <p class="col-md-12 p-md-2 m-md-1">
+                Copyright &copy; 2018 PersephoneUnderground Designs
+            </p>     
+        </footer>
+        <!-- end row3 footer -->
 
     </div>
 </body>
