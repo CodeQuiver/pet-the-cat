@@ -1,0 +1,144 @@
+/* general styles */
+body {
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    color: #777777;
+    background-image: url(../images/subtle_white_feathers.png);
+    background-color: #ffffff;
+}
+
+h1{
+    color: #061283;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 32px;
+}
+
+h2 {
+    color: #061283;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 24px;
+}
+
+a:link, a:visited {
+    color: #138d90;
+}
+
+a:hover, a:active, a:focus {
+    color: #fd3c3c;
+}
+
+a img {
+    border: 0px;
+}
+
+/* custom button styles */
+.btn-primary { 
+    color: #ffffff; 
+    background-color: #061283; 
+    border-color: #061283; 
+  } 
+   
+  .btn-primary:hover, 
+  .btn-primary:focus, 
+  .btn-primary:active, 
+  .btn-primary.active, 
+  .open .dropdown-toggle.btn-primary { 
+    color: #ffffff; 
+    background-color: #138d90; 
+    border-color: #061283; 
+  } 
+   
+  .btn-primary:active, 
+  .btn-primary.active, 
+  .open .dropdown-toggle.btn-primary { 
+    background-image: none; 
+  } 
+   
+  .btn-primary.disabled, 
+  .btn-primary[disabled], 
+  fieldset[disabled] .btn-primary, 
+  .btn-primary.disabled:hover, 
+  .btn-primary[disabled]:hover, 
+  fieldset[disabled] .btn-primary:hover, 
+  .btn-primary.disabled:focus, 
+  .btn-primary[disabled]:focus, 
+  fieldset[disabled] .btn-primary:focus, 
+  .btn-primary.disabled:active, 
+  .btn-primary[disabled]:active, 
+  fieldset[disabled] .btn-primary:active, 
+  .btn-primary.disabled.active, 
+  .btn-primary[disabled].active, 
+  fieldset[disabled] .btn-primary.active { 
+    background-color: #061283; 
+    border-color: #061283; 
+  } 
+   
+  .btn-primary .badge { 
+    color: #061283; 
+    background-color: #ffffff; 
+  }
+/* end custom button styles */
+
+/* end general styles */
+
+nav {
+    border-bottom: 2px solid #cccccc;
+    background-color: #ffffff;
+}
+
+.navbar-brand, .navbar-brand h1 {
+    color: #ffffff;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    background-color: #138d90;
+    text-align: left;
+}
+
+
+/* styles within inner box */
+
+.jumbotron {
+    background-color: #ffffff;
+    border: #dddddd;
+}
+
+#headshot {
+    float: left;
+    margin-right:20px;
+}
+
+/* image card styles */
+/* .card-img-overlay {
+    position: absolute;
+    height: 60px;
+    top: 100px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #138d90;
+} */
+
+h2.card-title {
+    padding: auto;
+    margin: auto;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    min-height: 160px;
+    margin:0 auto;
+    padding: 0 auto;
+}
+
+
+
+/* end image card styles */
+
+/* end styles within inner box */
+
+/* footer styles */
+footer {
+    text-align: center;
+    background-color: #666666;
+    border-top: solid 4px #138d90;
+    color: #ffffff;
+    font-size: 10px;
+}
