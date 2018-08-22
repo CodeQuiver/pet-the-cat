@@ -170,7 +170,7 @@ a img {
     background-color: #a499b3;
 } */
 
-h2.card-title {
+h2.card-title, p.card-title {
     padding: auto;
     margin: auto;
 }

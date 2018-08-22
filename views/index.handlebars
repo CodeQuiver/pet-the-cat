@@ -41,24 +41,38 @@
                 {{#if pet_or_not}}
                 {{!-- meaning: if pet or not evaluates to true meaning the cat has been pet, print this --}}
                    Hi! This Cat has been pet! This code section works!
+                   {{!-- single cat card --}}
+                    <div class="col-md-4">
+                        <div class="card my-md-2 my-sm-2 my-xs-2 my-xs-2">
+                            <h2 class="card-title py-md-3 px-md-4">
+                                {{ cat_name }}
+                            </h2>
+
+                            <img class="card-img" alt="cat to pet" src="https://placekitten.com/280/200?image={{id}}" />
+                            <p class="card-title px-md-2">You already pet me. Leave me alone!</p>
+                            <button type="submit" class="btn btn-been-pet py-md-2 px-md-4 pet-the-cat" data-id="{{id}}" data-pet-state="{{pet_or_not}}">I got bored...</button>
+                        </div>
+                    </div>
+                    {{!-- END single cat card --}}
                 {{else}}
                 {{!-- meaning: if pet or not evaluates to false meaning the cat has not been pet, print this --}}
                    Hi! This Cat hasn't been pet! This code section works!
+                    {{!-- single cat card --}}
+                    <div class="col-md-4">
+                        <div class="card my-md-2 my-sm-2 my-xs-2 my-xs-2">
+                            <h2 class="card-title py-md-3 px-md-4">
+                                {{ cat_name }}
+                            </h2>
+
+                            <img class="card-img" alt="cat to pet" src="https://placekitten.com/280/200?image={{id}}" />
+                            
+                            <button type="submit" class="btn btn-primary py-md-2 px-md-4 pet-the-cat" data-id="{{id}}" data-pet-state="{{pet_or_not}}">Pet Me!</button>
+                        </div>
+                    </div>
+                    {{!-- END single cat card --}}
                 {{/if}}
 
-                {{!-- single cat card --}}
-                <div class="col-md-4">
-                    <div class="card my-md-2 my-sm-2 my-xs-2 my-xs-2">
-                        <h2 class="card-title py-md-3 px-md-4">
-                            {{ cat_name }}
-                        </h2>
-
-                        <img class="card-img" alt="cat to pet" src="https://placekitten.com/280/200?image={{id}}" />
-                        
-                        <button type="submit" class="btn btn-primary py-md-2 px-md-4 pet-the-cat" data-id="{{id}}" data-pet-state="{{pet_or_not}}">Pet Me!</button>
-                    </div>
-                </div>
-                {{!-- END single cat card --}}
+                
                 {{/each}}
               {{!-- END #EACH SECTION HERE  --}}
 
