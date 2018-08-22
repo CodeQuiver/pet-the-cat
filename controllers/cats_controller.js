@@ -4,7 +4,25 @@ var router = express.Router();
 // Importing the model to use its database functions
 var cat = require("../models/cats_model");
 
-//HTML routes
+//Helper function- returns a random integer from 1 through the max given 
+  //ex. getRandomPosNotZeroInt(3);
+  // returns 1, 2, or 3;
+// function getRandomPosNotZeroInt(max) {
+//   var answer = Math.floor(Math.random() * Math.floor(max));
+//   answer = answer + 1;
+//   return answer;
+// }
+//END Helper function
+
+//Random image function for image from "Placekitten"- 
+  //there are only 16 images, so need a random number 1-16 to designate which one in the url
+// var randomImageId = function() {
+//   return getRandomPosNotZeroInt(16);
+//   };
+//END Random image function
+//NOTE- for now not using this randomization feature, needs more setup to pass the result correctly but is low priority
+
+//=============== HTML routes ======================================//
 //Get All route- displays home page and retrieves all data from cats table
 router.get("/", function(req, res) {
     //define callback function that will be passed through when data is requested to handle the response data
@@ -19,11 +37,10 @@ router.get("/", function(req, res) {
     //call cat.all method on model and pass the callback to handle the data
     cat.all(callbackDataHandler);
   });
-//END HTML routes
+//=============== END HTML routes ======================================//
 
 
-
-//API Data Routes
+//=============== API Data Routes ======================================//
 
 //POST Route- Creates new cat database entry
 router.post("/api/cats/:name", function(req, res) {
@@ -65,10 +82,14 @@ router.put("/api/cats/:updateField/:newValue/:id", function(req, res) {
         console.log(res);
       });
 });
+//=============== END API Data Routes ======================================//
+
+// Export routes for server.js to use.
+module.exports = router;
 
 
-//END API Data Routes
 
+//OLD CODE USED AS STARTER
 // //API Routes/data routes
 // router.get("/", function(req, res) {
 //     //call "all" function in cats_model
@@ -97,5 +118,4 @@ router.put("/api/cats/:updateField/:newValue/:id", function(req, res) {
 //END API Routes
 
 
-// Export routes for server.js to use.
-module.exports = router;
+

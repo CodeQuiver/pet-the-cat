@@ -32,6 +32,7 @@ $(function() {
         //checks current pet state of cat and reverses it for update- pets the cat when clicking "Mrow! Pet Meee!!!", or other button will say "the cat is bored again" for toggling the cat back to pettable
         if (petState == 0) {
             updatedPetState = 1;
+            //update button data pet-state to 1
         } else if(petState == 1) {
             updatedPetState = 0;
         } else {
@@ -55,6 +56,5 @@ $(function() {
     });
 
     //Update function 2 - update name of cat- optional addition later
-
 
     });
