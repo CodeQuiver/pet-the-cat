@@ -78,8 +78,9 @@ router.put("/api/cats/:updateField/:newValue/:id", function(req, res) {
   var catId = req.params.id;
     
     //call update function in cats_model
-    cat.update(field, value, catId, function(res){
-        console.log(res);
+    cat.update(field, value, catId, function(result){
+        // console.log(res);
+        res.json({ id: result.insertId });
       });
 });
 //=============== END API Data Routes ======================================//
