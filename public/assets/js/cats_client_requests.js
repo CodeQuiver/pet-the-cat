@@ -15,9 +15,10 @@ $(function() {
             type: "POST"
         }).then(
             function() {
-            console.log("Success! Added new cat to the database.");
+            // console.log("Success! Added new cat to the database.");
             // Reload the page to get the updated list
             location.reload();
+            document.getElementById("create-cat-form").reset();
             }
         );
     });
@@ -47,7 +48,7 @@ $(function() {
             type: "PUT"
         }).then(
             function() {
-            console.log("Success! Updated cat pet_or_not state to opposite value.");
+            // console.log("Success! Updated cat pet_or_not state to opposite value.");
             // Reload the page to get the updated list
             location.reload();
             }

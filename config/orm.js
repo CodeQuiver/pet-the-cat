@@ -11,11 +11,6 @@ var connection = require("./connection");
 
 //DATABASE REQUEST ROUTES
 var orm = {
-  //what's the diff b/w 
-    //selectAll: function(){}
-    //and
-    //function selectAll(){}
-    //??? why write it in this odd way? Is it the only way to be able to export them? Do they have to be forced into an object to be exported? Why???? I'm pretty sure I can define a method the other way when creating an object, so why put it like this? WTF? Also see the example file for the controller this is meant to be passed to for further confusion and odd order of writing things.
     selectAll: function(tableName, callback) {
       var queryString = "SELECT * FROM " + tableName;
       connection.query(queryString, function(err, result) {
@@ -27,7 +22,7 @@ var orm = {
     },
     insertOne: function(tableName, colName, newValue, callback) {
       var queryString = "INSERT INTO " + tableName + " (" + colName + ") VALUES (\"" + newValue + "\")";
-      console.log("orm.js:orm.insertOne: " + queryString);
+      // console.log("orm.js:orm.insertOne: " + queryString);
       connection.query(queryString, function(err, result) {
         if (err) {
           throw err;
