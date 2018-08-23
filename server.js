@@ -37,9 +37,9 @@ connection.connect(function(err) {
   console.log("Connected to database at " + connection.threadId);
 });
 
-//TEST SECTION ONLY- REMOVE LATER
+//TEST SECTION ONLY
 // //IMPORTS
-var orm = require("./config/orm");
+// var orm = require("./config/orm");
 // var cat = require("./models/cats_model");
 
 
@@ -61,7 +61,7 @@ var orm = require("./config/orm");
 //       console.log(res);
 //     });
   //NOTE- true/false boolean field requires an integer input of 0 or 1
-//END TEST SECTION ONLY- REMOVE LATER
+//END TEST SECTION ONLY
 
 // START LISTENER - begin listening to client requests
 app.listen(PORT, function() {
